@@ -3,14 +3,14 @@ using namespace std;
 
 int main()
 {
-    int i, j, continua;
+    int i, j, continua, sd1=0, sd2=0;
     float mat[3][3];
     
     cout<<"\nEsse programa...";
     
     continua=1;
     
-    while(continua==1) /* em evolução. Ignorar condição no por enquanto */
+    while(continua==1) 
     {
         continua=1;
         for(i=0; i<=2; i++)
@@ -21,8 +21,34 @@ int main()
                 cout<<"\nMAT["<<i<<"]["<<j<<"] "<<mat[i][j];
             }
         }
-        continua=0;
+    
+            for(i=0; i<=2; i++)
+            {
+                for(j=0; j<=2; j++)
+                {
+                    if(i-j==0) 
+                    {
+                        sd1=sd1+mat[i][j];
+                    }
+                    if(i+j==2)
+                    {
+                        sd2=sd2+mat[i][j];
+                    }
+                }
+            }
+    
+        cout<<"\n"<<sd1;
+    
+        cout<<"\n"<<sd2;
+    
+        cout<<"\nDeseja Fazer Novamente? ";
+        cin>>continua;
+        
+        if(continua=1)
+        {
+            sd1=0;
+            sd2=0;
+        }
     }
-
     return 0;
 }
