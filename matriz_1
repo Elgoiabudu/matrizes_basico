@@ -10,7 +10,7 @@ int main()
     
     continua=1;
     
-    while(continua==1)
+    while(continua==1) /* em evolução. Ignorar condição no por enquanto */
     {
         continua=1;
         for(i=0; i<=2; i++)
