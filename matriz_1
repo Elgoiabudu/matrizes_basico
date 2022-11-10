@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i, j, continua;
+    float mat[3][3];
+    
+    cout<<"\nEsse programa...";
+    
+    continua=1;
+    
+    while(continua==1)
+    {
+        continua=1;
+        for(i=0; i<=2; i++)
+        {
+            for(j=0; j<=2; j++)
+            {
+                mat[i][j] = rand() % 30;
+                cout<<"\nMAT["<<i<<"]["<<j<<"] "<<mat[i][j];
+            }
+        }
+        continua=0;
+    }
+
+    return 0;
+}
